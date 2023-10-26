@@ -1,0 +1,289 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$build/default/debug/main.o
+HPINT CODE 0 8 8 6 1 2
+HPISR CODE 0 1E 1E 8E 1 2
+LPINT CODE 0 18 18 6 1 2
+LPISR CODE 0 134 134 A 1 2
+entry CODE 0 0 0 4 1 2
+setup CODE 0 AC AC 3C 1 2
+main CODE 0 E8 E8 3C 1 2
+config CONFIG 4 300000 300000 E 1 1
+consts CONST 0 124 124 10 1 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 60-7FF 1
+SFR F53-FFF 1
+BANK0 60-FF 1
+BANK1 100-1FF 1
+BANK2 200-2FF 1
+BANK3 300-3FF 1
+BANK4 400-4FF 1
+BANK5 500-5FF 1
+BANK6 600-6FF 1
+BANK7 700-7FF 1
+CONST 4-7 1
+CONST E-17 1
+CONST 13E-7FFF 1
+IDLOC 200000-200007 1
+SMALLCONST 800-7FFF 1
+CODE 4-7 1
+CODE E-17 1
+CODE 13E-7FFF 1
+BIGRAM 4-7 1
+BIGRAM E-17 1
+BIGRAM 13E-7FF 1
+BIGSFR F53-FFF 1
+COMRAM 0-5F 1
+EEDATA F00000-F000FF 1
+MEDIUMCONST 800-7FFF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$build/default/debug/main.o
+134 LPISR CODE >242:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+136 LPISR CODE >243:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+138 LPISR CODE >244:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+13C LPISR CODE >245:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+18 LPINT CODE >237:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+1C LPINT CODE >238:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+1E HPISR CODE >172:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+20 HPISR CODE >173:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+24 HPISR CODE >174:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+28 HPISR CODE >176:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+2A HPISR CODE >177:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+2C HPISR CODE >178:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+2E HPISR CODE >179:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+30 HPISR CODE >180:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+34 HPISR CODE >181:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+36 HPISR CODE >182:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+38 HPISR CODE >184:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+3C HPISR CODE >185:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+40 HPISR CODE >186:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+44 HPISR CODE >187:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+48 HPISR CODE >189:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+4A HPISR CODE >190:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+4C HPISR CODE >191:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+50 HPISR CODE >192:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+52 HPISR CODE >193:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+54 HPISR CODE >194:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+56 HPISR CODE >195:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+5A HPISR CODE >196:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+5E HPISR CODE >198:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+60 HPISR CODE >199:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+62 HPISR CODE >200:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+66 HPISR CODE >201:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+68 HPISR CODE >202:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+6A HPISR CODE >203:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+6E HPISR CODE >204:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+72 HPISR CODE >206:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+74 HPISR CODE >207:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+76 HPISR CODE >208:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+7A HPISR CODE >209:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+7C HPISR CODE >210:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+7E HPISR CODE >211:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+80 HPISR CODE >212:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+84 HPISR CODE >214:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+88 HPISR CODE >216:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+8A HPISR CODE >217:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+8C HPISR CODE >218:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+90 HPISR CODE >219:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+92 HPISR CODE >220:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+94 HPISR CODE >221:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+98 HPISR CODE >223:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+9A HPISR CODE >224:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+9C HPISR CODE >225:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+9E HPISR CODE >226:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+A0 HPISR CODE >227:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+A2 HPISR CODE >228:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+A6 HPISR CODE >230:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+A8 HPISR CODE >231:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+AA HPISR CODE >233:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+8 HPINT CODE >168:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+C HPINT CODE >169:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+E8 main CODE >133:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+EA main CODE >134:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+EE main CODE >135:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+F2 main CODE >138:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+F4 main CODE >139:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+F6 main CODE >140:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+FA main CODE >142:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+FC main CODE >143:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+100 main CODE >144:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+102 main CODE >146:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+104 main CODE >149:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+108 main CODE >150:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+10C main CODE >153:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+10E main CODE >154:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+112 main CODE >155:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+114 main CODE >156:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+116 main CODE >159:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+118 main CODE >160:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+11A main CODE >161:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+11C main CODE >162:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+11E main CODE >163:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+122 main CODE >164:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+AC setup CODE >93:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+AE setup CODE >94:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+B0 setup CODE >95:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+B2 setup CODE >96:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+B4 setup CODE >97:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+B6 setup CODE >98:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+B8 setup CODE >99:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+BA setup CODE >102:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+BC setup CODE >103:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+BE setup CODE >104:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+C0 setup CODE >105:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+C2 setup CODE >106:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+C4 setup CODE >107:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+C6 setup CODE >108:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+C8 setup CODE >110:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+CA setup CODE >111:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+CC setup CODE >112:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+CE setup CODE >113:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+D0 setup CODE >114:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+D2 setup CODE >115:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+D4 setup CODE >118:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+D6 setup CODE >119:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+D8 setup CODE >120:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+DA setup CODE >123:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+DC setup CODE >124:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+DE setup CODE >125:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+E0 setup CODE >126:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+E2 setup CODE >127:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+E4 setup CODE >129:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+0 entry CODE >88:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+124 consts CONST >83:/home/leon/Documents/Code/MPLABXProjects/4digitHEX.X/main.asm
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__Hspace_0 13E 0 ABS 0 - -
+__Hspace_1 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__Hspace_4 60000E 0 ABS 0 - -
+__Hudata_bank0 1E 0 ABS 0 udata_bank0 -
+__Hudata_bank1 1E 0 ABS 0 udata_bank1 -
+__Hudata_bank2 1E 0 ABS 0 udata_bank2 -
+__Hudata_bank3 1E 0 ABS 0 udata_bank3 -
+__Hudata_bank4 1E 0 ABS 0 udata_bank4 -
+__Hudata_bank5 1E 0 ABS 0 udata_bank5 -
+__Hudata_bank6 1E 0 ABS 0 udata_bank6 -
+__Hudata_bank7 1E 0 ABS 0 udata_bank7 -
+__L__absolute__ 0 0 ABS 0 __absolute__ -
+isa$xinst 0 0 ABS 0 - build/default/debug/main.o
+__HHPINT E 0 CODE 0 HPINT -
+__HHPISR 1E 0 ABS 0 HPISR -
+__HLPINT 1E 0 CODE 0 LPINT -
+__HLPISR 1E 0 ABS 0 LPISR -
+__Hedata 1E 0 ABS 0 edata -
+__Hentry 4 0 CODE 0 entry -
+__Hsetup 1E 0 ABS 0 setup -
+__Hudata 1E 0 ABS 0 udata -
+__Hconfig 30000E 0 CONFIG 4 config -
+__Hconsts 1E 0 ABS 0 consts -
+__LHPINT 8 0 CODE 0 HPINT -
+__LHPISR 1E 0 ABS 0 HPISR -
+__LLPINT 18 0 CODE 0 LPINT -
+__LLPISR 1E 0 ABS 0 LPISR -
+__Ledata 1E 0 ABS 0 edata -
+__Lentry 0 0 CODE 0 entry -
+__Lsetup 1E 0 ABS 0 setup -
+__Ludata 1E 0 ABS 0 udata -
+__Hcode 1E 0 ABS 0 code -
+__Hdata 1E 0 ABS 0 data -
+__Hmain 1E 0 ABS 0 main -
+__Lcode 1E 0 ABS 0 code -
+__Ldata 1E 0 ABS 0 data -
+__Lmain 1E 0 ABS 0 main -
+__S0 13E 0 ABS 0 - -
+__S1 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+__Lconfig 0 0 CONFIG 4 config -
+__Lconsts 1E 0 ABS 0 consts -
+isa$std 1 0 ABS 0 - build/default/debug/main.o
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
+__Ludata_bank0 1E 0 ABS 0 udata_bank0 -
+__Ludata_bank1 1E 0 ABS 0 udata_bank1 -
+__Ludata_bank2 1E 0 ABS 0 udata_bank2 -
+__Ludata_bank3 1E 0 ABS 0 udata_bank3 -
+__Ludata_bank4 1E 0 ABS 0 udata_bank4 -
+__Ludata_bank5 1E 0 ABS 0 udata_bank5 -
+__Ludata_bank6 1E 0 ABS 0 udata_bank6 -
+__Ludata_bank7 1E 0 ABS 0 udata_bank7 -
+__H__absolute__ 0 0 ABS 0 __absolute__ -
+__Hudata_acs 1E 0 ABS 0 udata_acs -
+__Ludata_acs 1E 0 ABS 0 udata_acs -
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+HPINT 0 8 8 6 1
+LPINT 0 18 18 10C 1
+LPISR 0 134 134 A 1
+entry 0 0 0 4 1
+consts 0 124 124 10 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
